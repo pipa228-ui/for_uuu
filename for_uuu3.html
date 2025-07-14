@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Для тебя :*</title>
+    <style>
+      #compliment {
+        color: rgb(182, 26, 104);
+        font-size: 20px;
+        font-family: 'Comic Sans MS', cursive;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>Привет, любимая пипа!</h1>
+
+    <p>Я глупенькiй, но я старалась и сделала это для тебя :3</p>
+
+    <p id="compliment"></p>
+
+    <button onclick="showMessage()">Нажми на меня</button>
+
+    <p id="message"></p>
+
+    <script>
+      // Список комплиментов
+      const compliments = [
+        "Я тебя хочу)!",
+        "У тебя невероятные глаза!",
+        "Ты моя любовь!",
+        "С тобой всегда тепло и светло.&#9728",
+        "Ты вдохновляешь меня каждый день."
+      ];
+
+      // Функция для выбора случайного комплимента
+      function getRandomCompliment() {
+        const index = Math.floor(Math.random() * compliments.length);
+        return compliments[index];
+      }
+
+      // Показываем комплимент в элементе с id="compliment"
+      document.getElementById("compliment").innerText = getRandomCompliment();
+
+      // Функция для кнопки
+      function showMessage() {
+        document.getElementById("message").innerText = "Это я! И я тебя люблю! ";
+      }
+    </script>
+
+  </body>
+</html>
